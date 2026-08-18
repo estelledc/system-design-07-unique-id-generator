@@ -25,7 +25,10 @@ No test is skipped. CI runs the same locked gate on Node 22, 24, and 26.
 
 ## Current receipts
 
-The initial public CI receipt is pending repository publication. Replace this sentence only after the GitHub run is green.
+- Implementation commit: [`8e3d66264b7c26389c0f027ddc43e2cb9a6d3dd6`](https://github.com/estelledc/system-design-07-unique-id-generator/commit/8e3d66264b7c26389c0f027ddc43e2cb9a6d3dd6).
+- Public CI: [run 32152535688](https://github.com/estelledc/system-design-07-unique-id-generator/actions/runs/32152535688), completed successfully on 2026-08-18.
+- Node `22.23.2`, `24.19.0`, and `26.7.0` each reported 24 tests passed, 0 failed, and 0 skipped, followed by a successful crash-fence recovery smoke and `npm audit` with 0 vulnerabilities.
+- Each runner generated 100,000 unique, strictly increasing IDs and cleared the explicit 10,000 IDs/s local-hot-burst floor. Observed runner rates ranged from about 2.0 to 3.1 million IDs/s; those measurements are evidence for the bounded benchmark only, not a service-capacity claim.
 
 ## Evidence boundary
 
